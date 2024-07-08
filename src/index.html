@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>로그인 화면</title>
+    <meta charset="utf-8">    
+    <meta author="2116016 임서현">
+    <!--인라인 스타일 시트 삽입-->  
+    <style type="text/css">
+        /* 태그 선택자 */
+        h1 {font-family: "타이포_크레파스 M", "Cooper Blk BT"; font-size: 30pt; text-align: center;}
+        footer {font-size: 10pt; margin-top: 100px; text-align: center; }
+        strong {font-size: 11pt; }
+        /* 클래스 선택자 */
+        .main {width: 100%; margin-top: 120px; }
+        .login {font-family: "맑은 고딕"; width: 200px; height: 40px; border: 1px solid gray; margin: 10px auto; }
+        .login input {border: none; width: 180px; height: 30px; margin-top: 5px; margin-left: 5px; }
+        .u_sex {font-family: "맑은 고딕"; text-align: center; margin-top: 10px;}
+        .text1 {font-family: "맑은 고딕"; font-size: 11pt; text-align: center; }
+    </style>
+  </head>
+  <body>
+      <div class="main">
+      <header>
+      <h1>LSH's PlayGround</h1>
+      <p class="text1">이름과 나이, 성별을 입력한 후 '확인'을 눌러주세요!!</p>
+      </header>
+      <section>
+        <!--<input>요소를 사용한 입력 폼 작성-->
+        <!--<div>를 사용하여 블록단위로 클래스 선택자로 스타일 적용-->
+      <form method="get" action="home.php">
+          <div class="login">
+            <input type="text" name="u_name" placeholder="이름" value="">
+          </div>
+          <div class="login">
+            <input type="number" name="u_age" placeholder="나이" value="">
+          </div>
+          <div class="u_sex">
+              성별ㅣ &nbsp<input type="radio" name="u_sex" value="여"> 여
+                    <input type="radio" name="u_sex" value="남"> 남
+          </div>
+          <!--"확인" 버튼을 누르면 home.php으로 입력 폼에 입력한 내용들을 전송-->
+          <div style="text-align: center">
+            <p><input type="submit" value="확인"></p>
+          </div>
+      </form>
+      </section>
+      <footer>
+          <strong>LSH</strong> Copyright © LSH Corp. All Rights Reserved.
+      </footer>
+      </div>
+  </body>
+</html>

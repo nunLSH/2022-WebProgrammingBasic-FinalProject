@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>카드놀이</title>
+    <meta charset="utf-8">    
+    <meta author="2116016 임서현">
+    <!--인라인 스타일 시트 삽입-->  
+    <style type="text/css">
+        /* 태그 선택자 */
+        h1 {font-family:"상상토끼 꽃길"; font-size: 30pt; text-align: center;}
+        footer {font-size: 10pt; margin-top: 60px; text-align: center; }
+        h3 {font-family: "타이포_크레파스 M", "Cooper Blk BT"; font-size: 15pt; text-align: center;}
+        table {width: 500px; height: 350px; table-layout: fixed; }
+        /* 아이디 선택자 */
+        #b1 {position: absolute; top: 20px; right: 20px; }
+        #showImg {width: 400px; height: auto;}
+        #b2 {position: absolute; top: 520px; right: 618px;}
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+        var images = new Array(); // 배열 객체 생성 - 이미지 배열
+        images[0] = "https://ww.namu.la/s/4c7d1d567d727c95854e58716c69e3ea5714d6dc55df4efed79c97d0d2a8932f4cd8cf5aa761e44c567046889c4e2d0ef4702f5ba7d9cdddf4371bba7987273cdc2710ee3a85a76f431d8ac5f209b141";
+        images[1] = "https://cdn.mindgil.com/news/photo/202005/69245_3202_1851.jpg";
+        images[2] = "https://www.mycity24.com.au/mycityko/pad_img/45789_1.jpg";
+        images[3] = "https://cdn.mindgil.com/news/photo/202006/69432_3588_1441.jpg";
+        images[4] = "https://blog.kakaocdn.net/dn/yXO4Q/btq811vPaJm/Nbe3NTZzd6D2Li4DMqtKm0/img.png";
+        images[5] = "https://cdn.mindgil.com/news/photo/202010/70028_5168_1500.jpg";
+        images[6] = "http://kormedi.com/wp-content/uploads/2020/09/201601291054128818_l_99_201601291123031.jpg";
+        images[7] = "https://t1.daumcdn.net/cfile/tistory/267CFC3958A4451B3A";
+        images[8] = "https://t1.daumcdn.net/cfile/tistory/214DC34558F84CEC18";
+        images[9] = "https://image.news1.kr/system/ap/2017/8/25/2697423/dims/optimize";
+
+        function randomImg() {
+            var imgNum = Math.round(Math.random()*9); 
+            /* Math.random()에서 1이 최댓값이므로 9를 곱하면 9가 최대, 따라서 반올림하면
+            0 ~ 9까지의 정수값이 나옴 */
+            var show = document.getElementById("showImg");
+            show.src = images[imgNum];
+        }
+    </script>
+    <div class="main">
+    <header>
+      <h3>LSH's PlayGround</h3>
+      <h1>카드 놀이</h1>
+    </header>
+    <article>
+    <button id="b1" onclick="window.history.back();"> 홈으로 </button>
+    <center>
+    <table border="1">
+        <tr>
+            <td>
+                <div style="text-align: center;">
+                <img id="showImg"/>
+                </div>
+            </td>
+        </tr>
+    </table>
+   </center>
+    </div>
+    <button id="b2" onclick="randomImg();">다음</button>
+    </article>
+    <footer>
+        <strong>LSH</strong> Copyright © LSH Corp. All Rights Reserved.
+    </footer>
+    </div>
+  </body>
+</html>
